@@ -14,3 +14,8 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+
+$('.submit').click(function() {
+	$(this).closest('form').submit();
+});
