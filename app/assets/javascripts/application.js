@@ -15,7 +15,36 @@
 //= require turbolinks
 //= require_tree .
 
+$(function(){
+	$('.submit').click(function() {
+		$(this).closest('form').submit();
+	});
+});
+$(function(){
+	$('.artist-toggle').click(function() {
 
-$('.submit').click(function() {
-	$(this).closest('form').submit();
+				$('.artist-link').toggleClass('display');
+				$('.slicknav_menu.artist-link').toggleClass('display');
+
+	});
+});
+
+$(function(){
+	$('.audience-toggle').click(function() {
+
+		$('.audience-link').toggleClass('display');
+		$('.slicknav_menu.audience-link').toggleClass('display');
+
+	});
+});
+
+$(function(){
+	$('.slicknav_nav > .audience-toggle.slicknav_txtnode').click(function() {
+
+		$('.slicknav_nav > .audience-link').toggleClass('display');
+
+	});
+});
+$(function(){
+	$('.nav-collapse').slicknav();
 });

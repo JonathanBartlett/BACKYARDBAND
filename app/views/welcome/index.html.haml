@@ -5,7 +5,60 @@
 	%title BACKYARDBAND
 %body
 	.homebanner
-		= render partial: 'header'
+		%header.cf
+			.logo
+				%a.h1{href: root_path}
+					backyardband
+			%nav
+				%ul
+					-if user_signed_in?
+						%nav.nav-collapse
+							%ul
+								%li
+									%a{href: ""}
+										Browse
+								%li
+									%a{href: edit_user_registration_path}
+										Account Settings
+								%li
+									%a{href: destroy_user_session_path, method: :delete}
+										Logout
+					-elsif artist_signed_in?
+						%nav.nav-collapse
+							%ul
+								%li
+									%a{href: ""}
+										Artist Dashboard
+								%li
+									%a{href: edit_artist_registration_path}
+										Account Settings
+								%li
+									%a{href: destroy_artist_session_path, method: :delete}
+										Logout
+										
+								
+					-else
+						%nav.nav-collapse
+							%ul
+								%li.artist-toggle
+									Artist
+								%li.artist-link
+									%a{href: new_artist_session_path}
+										Sign In
+								%li.artist-link
+									%a{href: new_artist_registration_path}
+										Sign Up
+								%li.audience-toggle
+									Audience
+								%li.audience-link
+									%a{href: new_user_session_path}
+										Sign In
+								%li.audience-link
+									%a{href: new_user_registration_path}
+										Sign Up
+								%li.other-link
+									%a{:href => "#"}
+										Browse
 		.content.cf
 			%p.notice
 				=notice
