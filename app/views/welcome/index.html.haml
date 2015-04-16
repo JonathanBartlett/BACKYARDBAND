@@ -1,0 +1,27 @@
+!!!
+%html
+%head
+	%meta{:name => "viewport", :content => "width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"}/
+	%title BACKYARDBAND
+%body
+	.homebanner
+		= render partial: 'header'
+		.content.cf
+			%p.notice
+				=notice
+			%p.alert
+				=alert
+
+			%h1
+				Welcome to BACKYARDBAND
+				%br.space/
+				The hub for 
+				%span.highlight
+					Up and Coming Artists
+				%br/ 
+				and their Audiences.
+				
+			%a.button.button-highlight{:href => ""}
+				Explore
+			%a.button{:href => ""}
+				Add an Album

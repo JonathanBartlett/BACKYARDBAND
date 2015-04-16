@@ -1,0 +1,72 @@
+!!!
+%html
+%head
+	%title
+		BackYardBand
+	= stylesheet_link_tag    'application', media: 'all' 
+	= javascript_include_tag 'application'
+	= csrf_meta_tags
+%body
+	
+	-if current_page?root_path
+		%p{style: 'display: none;'}
+			Hello World
+	-else
+		%header.cf
+			.logo
+				%a.h1{href: root_path}
+					backyardband
+			%nav
+				%ul
+					-if user_signed_in?
+					
+					-else
+						%nav.nav-collapse
+							%ul
+								%li.artist-toggle
+									Artist
+								%li.artist-link
+									%a{:href => "#"}
+										Sign In
+								%li.artist-link
+									%a{:href => "#"}
+										Sign Up
+								%li.audience-toggle
+									Audience
+								%li.audience-link
+									%a{:href => "#"}
+										Sign In
+								%li.audience-link
+									%a{:href => "#"}
+										Sign Up
+								%li.other-link
+									%a{:href => "#"}
+										Browse
+
+	=yield
+	
+	:javascript
+		$('.artist-toggle').click(function() {
+			
+			$('.artist-link').toggleClass('display');
+			$('.slicknav_menu.artist-link').toggleClass('display');
+
+		});
+
+
+		$('.audience-toggle').click(function() {
+			
+			$('.audience-link').toggleClass('display');
+			$('.slicknav_menu.audience-link').toggleClass('display');
+
+		});
+		
+		$('.slicknav_nav > .audience-toggle.slicknav_txtnode').click(function() {
+			
+			$('.slicknav_nav > .audience-link').toggleClass('display');
+			
+		});
+	:javascript
+		$(function(){
+			$('.nav-collapse').slicknav();
+		});

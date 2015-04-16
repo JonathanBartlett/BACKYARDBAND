@@ -1,0 +1,28 @@
+%header.cf
+	.logo
+		%a.h1{href: root_path}
+			backyardband
+	%nav
+		%ul
+			-if user_signed_in?				
+				%li
+					%a{:href => ""}
+						Artist Dashboard
+				%li
+					%a{href: edit_user_registration_path}
+						Account Settings
+				%li
+					%a{:href => ""}
+						Browse
+				%li
+					= link_to "Sign Out", destroy_session_path(:user), :method => :delete
+			-else
+				%li
+					%a{href: new_user_session_path}
+						Sign In
+				%li
+					%a{href: new_user_registration_path}
+						Sign Up
+				%li
+					%a{:href => ""}
+						Browse

@@ -10,6 +10,108 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require_tree .
  *= require_self
  */
+@import 'bourbon';
+@import 'normalize';
+$white: rgba(255,255,255,1.0);
+$highlight: rgba(144,72,150,1.0);
+$lightlight: rgba(170,116,173,1.0);
+$light: rgba(180,179,179,1.0);
+$dark: rgba(77,78,77,1.0);
+@import 'nav';
+@import 'slicknav.scss';
+@import 'welcome';
+@import 'albums';
+@import 'account';
+
+
+.cf:before, .cf:after {
+  
+  content: " ";
+  display: table;
+
+}
+
+.cf:after {
+  clear: both;
+}
+
+.wrapper-wide {
+
+  max-width: 80%;
+  margin: 0 auto;
+
+}
+
+.wrapper {
+
+  max-width: 70%;
+  margin: 0 auto;
+
+}
+
+.wrapper-narrow {
+
+  max-width: 50%;
+  margin: 0 auto;
+
+}
+
+.button {
+
+  display: inline-block;
+  min-width: 14rem;
+  background: $light;
+  color: $highlight;
+  text-decoration: none;
+  padding: 0.75rem 2rem;
+  margin: 0 1rem;
+  border-radius: 4rem;
+  transition: all ease-in-out 0.7s;
+  
+  
+  &:hover {
+  
+    background: darken($light, 35%);
+    color: lighten($lightlight, 10%);
+  
+  }
+
+}
+
+.button-highlight {
+
+  background: $lightlight;
+  color: $white;
+  transition: all ease-in-out 0.4s;
+  &:hover {
+  
+    background: darken($lightlight, 35%);
+  
+  }
+
+}
+
+.button-bad {
+
+  background: red;
+  color: $white;
+  transition: all ease-in-out 0.4s;
+  &:hover {
+  
+    background: darken(red, 15%);
+  
+  }
+
+}
+
+
+
+.highlight {
+  color: $highlight;
+}
+
+.space {
+  margin-bottom: 0.6rem;
+}
