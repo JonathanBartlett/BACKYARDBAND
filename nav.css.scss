@@ -1,0 +1,46 @@
+header {
+	width: 90%;
+	margin: 0 auto;
+	padding: 3rem 0;
+	a.h1 {
+		text-transform: uppercase;
+		letter-spacing: 5px;
+		color: $dark;
+		float: left;
+		font-size: 1.2rem;
+		text-decoration: none;
+		transition: all ease-in-out 0.4s;
+
+		&:hover {
+
+			color: lighten($dark, 25%);
+
+		}
+
+	}
+	nav {
+		float: right;
+
+		ul {
+			list-style: none;
+			color: $dark;
+
+			li {
+			display: inline;
+			padding-left: 20px;
+			text-align: right;
+			text-transform: uppercase;
+
+				a {
+				color: inherit;
+				text-decoration: none;
+				transition: all ease-in-out 0.4s;
+					&:hover {
+
+						color: lighten($dark, 20%);
+
+					}
+				}
+			}
+		}
+}

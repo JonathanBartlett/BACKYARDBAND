@@ -12,7 +12,6 @@
  *
  *= require_self
  */
-
 @import 'bourbon';
 @import 'normalize';
 $white: rgba(255,255,255,1.0);
@@ -20,6 +19,8 @@ $highlight: rgba(144,72,150,1.0);
 $lightlight: rgba(170,116,173,1.0);
 $light: rgba(180,179,179,1.0);
 $dark: rgba(77,78,77,1.0);
+@import 'nav';
+@import 'slicknav.scss';
 @import 'welcome';
 @import 'albums';
 @import 'account';
