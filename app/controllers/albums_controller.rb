@@ -1,2 +1,2 @@
-class AlbumsController < ApplicationControllers
+class AlbumsController < ApplicationController
 end
