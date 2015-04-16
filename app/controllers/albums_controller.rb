@@ -1,3 +1,2 @@
-class AlbumsController < ApplicationController
-	has_many :songs
+class AlbumsController < ApplicationControllers
 end
