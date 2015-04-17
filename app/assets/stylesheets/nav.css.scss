@@ -55,7 +55,6 @@ header {
       cursor: pointer;
       display: inline;
       transition: all ease-in-out 0.4s;
-      
   
       padding:0.4rem;
       
@@ -67,7 +66,6 @@ header {
           color: $lightlight;
         
         }
-        color: $lightlight !important;
         
       }
 }
@@ -92,7 +90,8 @@ header {
   
     .artist-link, .audience-link {
     
-      display: none;
+      display: inline;
+		 background-color: $lightlight;
     
     }
   

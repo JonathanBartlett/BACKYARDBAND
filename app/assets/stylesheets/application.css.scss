@@ -115,3 +115,13 @@ $dark: rgba(77,78,77,1.0);
 .space {
   margin-bottom: 0.6rem;
 }
+
+@media screen and (max-width: 600px) {
+
+	.wrapper-narrow, .wrapper, .wrapper-wide {
+	
+		max-width: 95%;
+	
+	}
+
+}
