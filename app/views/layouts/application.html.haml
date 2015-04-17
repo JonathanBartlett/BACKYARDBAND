@@ -19,7 +19,31 @@
 			%nav
 				%ul
 					-if user_signed_in?
-					
+						%nav.nav-collapse
+							%ul
+								%li
+									%a{href: ""}
+										Browse
+								%li
+									%a{href: edit_user_registration_path}
+										Account Settings
+								%li
+									%a{href: destroy_user_session_path, method: :delete}
+										Logout
+					-elsif artist_signed_in?
+						%nav.nav-collapse
+							%ul
+								%li
+									%a{href: ""}
+										Artist Dashboard
+								%li
+									%a{href: edit_artist_registration_path}
+										Account Settings
+								%li
+									%a{href: destroy_artist_session_path, method: :delete}
+										Logout
+										
+								
 					-else
 						%nav.nav-collapse
 							%ul
